@@ -30,7 +30,7 @@ public class ThisTask extends Task {
     }
 
     @Scheduled(fixedRate = 1000L)
-    public void createSitemapTask() {
+    public void createTask() {
         String uuid = UUID.randomUUID().toString();
         taskManager.taskQueue.add(new ThisTask(uuid));
     }

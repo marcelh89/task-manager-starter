@@ -30,7 +30,7 @@ public class ThatTask extends Task {
     }
 
     @Scheduled(fixedRate = 3000L)
-    public void createAnotherTask() {
+    public void createTask() {
         String uuid = UUID.randomUUID().toString();
         taskManager.taskQueue.add(new ThatTask(uuid));
     }
